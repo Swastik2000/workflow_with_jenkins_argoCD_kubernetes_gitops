@@ -27,3 +27,31 @@ sudo systemctl start jenkins
 ```
 sudo systemctl status jenkins
 ```
+
+## Installing Minikube locally 
+[https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
+```
+brew install minikube
+brew unlink minikube
+brew link minikube
+```
+
+```
+minikube start
+```
+
+## Install Argo cd
+```
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+#### Argo CD CLI
+```
+brew install argocd
+```
+
+#### Access Argo CD Api server
+```
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
