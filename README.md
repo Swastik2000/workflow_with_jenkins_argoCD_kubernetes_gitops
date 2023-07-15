@@ -5,7 +5,7 @@ This repo along with [https://github.com/saha-rajdeep/kubernetesmanifest](https:
 
 ## Downloading and installing Jenkins on ec2
 
-'''
+```
 sudo yum update –y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -17,12 +17,13 @@ sudo dnf install java-11-amazon-corretto -y
 sudo yum install jenkins -y
 
 sudo systemctl enable jenkins
-'''
+```
 
-### Starting jenkins
-'''
+#### Starting jenkins
+```
 sudo systemctl start jenkins
-'''
-'''
+```
+#### Jenkins Status
+```
 sudo systemctl status jenkins
-'''
+```
